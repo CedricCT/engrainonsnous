@@ -171,7 +171,7 @@ module.exports = {
             console.log("search datamapper")
             console.log("%"+search.ilike+"%");
             const queryPrepared = {
-                text: `SELECT * FROM "seedlist" WHERE "variety_name" ILIKE $1 LIMIT 12 OFFSET $2`,
+                text: `SELECT * FROM "seedlist" WHERE "variety_name" ILIKE $1 order by created_at DESC LIMIT 12 OFFSET $2 `,
                 values:["%"+search.ilike+"%", search.offset]}
             
             const result = await client.query(queryPrepared);

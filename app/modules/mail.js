@@ -18,6 +18,7 @@ module.exports = {
             subject: 'Confirm your email',
             text: `To confirm your email click on http://localhost:8080/uservalidate/${email}/${key}
                     To confirm your email click on https://boring-ramanujan-037bed.netlify.app/uservalidate/${email}/${key}
+                    <img  src="https://boring-ramanujan-037bed.netlify.app/images/8ceea8ae02e55660332dcccd429c5ad1.png" alt="Grapefruit slice atop a pile of other slices">
             `
         };
 
@@ -45,7 +46,7 @@ module.exports = {
             from: 'contactengrainonsnous@gmail.com',
             to: body.email,
             subject: 'New password',
-            text: `Your new password is: ${body.password}`
+            text: `Your new password is: ${body.password} `
         };
 
         transporter.sendMail(mailOptions, function (error, info) {

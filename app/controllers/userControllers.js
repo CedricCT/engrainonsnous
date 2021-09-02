@@ -250,5 +250,8 @@ module.exports = {
             cons
         }
 
+    },
+    async checkToken(request,response){
+        
     }
 }
